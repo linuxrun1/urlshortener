@@ -20,7 +20,7 @@ router.get('/shorten/:long', async(req,res)=>{
     // create url code
     const urlCode = shortid.generate()
     //check long url
-    if(validUrl.isUri(longUrl)){
+    if(longUrl){
         try{
             let url = await Url.findOne({longUrl})
             if(url){
