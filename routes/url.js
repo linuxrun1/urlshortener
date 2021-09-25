@@ -11,8 +11,8 @@ const Url = require('../models/Url')
 //@desc     Create short URL
 
 const baseUrl = 'http:localhost:5000'
-router.post('/shorten', async(req,res)=>{
-    const {longUrl} = req.body
+router.get('/shorten/:long', async(req,res)=>{
+    const {longUrl} = req.params.long
     //check base url
     if(!validUrl.isUri(baseUrl)){
         return res.status(401).json('Invalid base URL')
