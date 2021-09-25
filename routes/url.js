@@ -10,7 +10,7 @@ const Url = require('../models/Url')
 //@route    POST /api/url/shorten
 //@desc     Create short URL
 
-const baseUrl = 'http:localhost:5000'
+const baseUrl = 'https://url.vhost.my.id'
 router.get('/shorten/:long', async(req,res)=>{
     const {longUrl} = req.params.long
     //check base url
